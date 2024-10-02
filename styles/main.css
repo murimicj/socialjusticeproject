@@ -1,0 +1,389 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Global variables */
+:root {
+  --color-bg: #f3f4f6dd;
+  --color-Olympic: #008ecc;
+  --color-Carolina: #57a0d3;
+  --color-Orange: rgb(223, 66, 66);
+  --color-black: black;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --transition: all 400ms ease;
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-black);
+  background-color: var(--color-bg);
+  line-height: 1.4;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header and Navigation */
+header {
+  background-color: var(--color-light);
+  width: var(--container-width-md);
+  padding: 0.5rem 1.2rem;
+  z-index: 2;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+ul#nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font: 700;
+  list-style-type: none;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+nav a:hover {
+  color: var(--color-Carolina);
+}
+
+.cta-button {
+  background-color: var(--color-Orange);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-left: auto;
+}
+
+.cta-button:hover {
+  background-color: var(--color-Carolina);
+  color: white;
+}
+
+/* Main content */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5em;
+}
+
+section {
+  padding: 2rem 1em;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-light);
+  color: black;
+  padding: 2em;
+  text-align: center;
+  clear: both;
+}
+
+/* Home Section */
+#home {
+  padding: 2rem 1rem;
+  scroll-margin-top: 100px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#hero1 {
+  flex: 1;
+  max-width: 50%;
+}
+
+.hero {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  max-width: 300px;
+}
+
+.hero blockquote {
+  font-size: 1.2 rem;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.hero cite {
+  font-size: 1 rem;
+  color: #666;
+}
+
+/* Projects Section */
+.projects ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.projects ul li {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.projects ul li img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.projects ul li h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.projects ul li p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+/* Contact Section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#contact label {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--color-Carolina);
+}
+
+#contact textarea {
+  background-color: white;
+  color: black;
+}
+
+#contact input:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 3;
+}
+
+.menu-toggle .icon {
+  font-size: 32px;
+  color: var(--color-black);
+}
+
+/* Nav Menu */
+#nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav .cta-button:hover {
+  background-color: var(--color-Carolina);
+  color: white;
+}
+
+.cta-button-large {
+  background-color: var(--color-Orange);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-left: auto;
+}
+
+/*==============MEDIA QUERIES(SMALL DEVICES) ==============*/
+@media screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
+
+  .projects ul {
+    flex-direction: column;
+  }
+
+  .projects ul li {
+    flex: 1 1 100%;
+  }
+
+  .cta-button-large {
+    display: none;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #hero1,
+  .hero {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+
+  .hero blockquote {
+    font-size: 1rem;
+  }
+
+  /* Main content */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 1em;
+  }
+
+  .hero cite {
+    font-size: 0.9rem;
+  }
+
+  #contact {
+    padding: 1.5rem 1rem;
+  }
+
+  form {
+    padding: 1rem 0.5rem;
+  }
+}
